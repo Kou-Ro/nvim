@@ -1,0 +1,10 @@
+#!/bin/sh
+
+target="$(cd "$(pwd)/$(dirname "${0}")" && pwd)"
+
+# Skip worktree
+#git -C "${target}" update-index --skip-worktree init.lua
+
+# Create .zshenv symbolic link in Home
+mkdir -p "${HOME}/.config/nvim/"
+ln -s --backup=simple -S .bak "${target}/init.lua" "${HOME}/.config/nvim"
