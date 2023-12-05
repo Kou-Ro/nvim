@@ -3,6 +3,6 @@ if os.getenv("DOTFILES") then
     NDOTDIR = os.getenv("DOTFILES") .. "/nvim"
 end
 
-vim.opt.runtimepath:append{NDOTDIR}
+vim.opt.runtimepath:append(NDOTDIR)
 
-require("Common")
+require "common"
