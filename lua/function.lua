@@ -11,5 +11,5 @@ end
 -- @param variableName Option variableName
 -- @return Option value
 function vget(variableName)
-    return vim.o[variableName]:get()
+    return vim.o[variableName]
 end
