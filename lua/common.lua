@@ -7,4 +7,4 @@ require "vimopt"
 -- Package manager
 require "plugins"
 
-vim.cmd "colorscheme tokyonight"
+vim.cmd "colorscheme tokyonight-night"
