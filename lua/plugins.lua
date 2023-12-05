@@ -1,5 +1,5 @@
 -- Set runtimepath
-vset("runtimepath", vget("runtimepath") .. "," .. NDOTDIR .. "module/packer.nvim")
+vset("runtimepath", vget("runtimepath") .. "," .. NDOTDIR .. "/module/packer.nvim")
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 return require('packer').startup(function(use)
