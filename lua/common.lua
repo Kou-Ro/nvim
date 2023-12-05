@@ -5,4 +5,3 @@ require "function"
 require "vimopt"
 
 -- Package manager
-vset("runtimepath", vget("runtimepath") .. "," .. NDOTDIR .. "module")
