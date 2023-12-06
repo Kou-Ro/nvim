@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
     -- Color scheme
     use({
         "folke/tokyonight.nvim",
-        opt = true
+        opt = true,
+        config = function()
+            vim.cmd "colorscheme tokyonight"
+        end
     })
 end)
