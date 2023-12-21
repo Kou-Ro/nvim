@@ -3,7 +3,7 @@
 target="$(cd "$(pwd)/$(dirname "${0}")" && pwd)"
 
 # Skip worktree
-#git -C "${target}" update-index --skip-worktree init.lua
+git -C "${target}" update-index --skip-worktree init.lua
 
 # Create .zshenv symbolic link in Home
 mkdir -p "${HOME}/.config/nvim/"
