@@ -2,13 +2,37 @@
 vset("packpath", vget("packpath") .. "," .. NDOTDIR .. "/module/")
 vset("runtimepath", vget("runtimepath") .. "," .. NDOTDIR .. "/module/")
 
+vim.cmd("packadd packer.nvim")
+vim.cmd('autocmd BufWritePost init.lua PackerCompile')
+
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 require('packer').startup(function()
-  use "wbthomason/packer.nvim"
+  use {
+    "wbthomason/packer.nvim",
+    opt = true,
+  }
 
   use {
     "nvim-treesitter/nvim-treesitter",
     config = function() require("PluginConfig/nvim-treesitter")  end,
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function() require("PluginConfig/lualine") end,
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  }
+
+  use {
+    "nvim-lualine/lualine.nvim",
+  }
+
+  use {
+    "folke/tokyonight.nvim",
+    config = function()
+      require("PluginConfig/tokyonight")
+      vim.cmd("colorscheme tokyonight")
+    end,
   }
 end)
 
