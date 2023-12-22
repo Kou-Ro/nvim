@@ -2,8 +2,6 @@
 vset("packpath", vget("packpath") .. "," .. NDOTDIR .. "/module/")
 vset("runtimepath", vget("runtimepath") .. "," .. NDOTDIR .. "/module/")
 
-vim.cmd("packadd packer.nvim")
-vim.cmd('autocmd BufWritePost init.lua PackerCompile')
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 require('packer').startup(function()
@@ -33,6 +31,12 @@ require('packer').startup(function()
       require("PluginConfig/tokyonight")
       vim.cmd("colorscheme tokyonight")
     end,
+  }
+
+  use {
+    "codota/tabnine-nvim",
+    run = "./dl_binaries.sh",
+    config = function()  require("PluginConfig/tabnine") end
   }
 end)
 
