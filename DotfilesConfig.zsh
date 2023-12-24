@@ -1,10 +1,8 @@
 #!/bin/zsh
 
-nvim-update(){
-  git -C "${DOTFILES}/nvim" reset --soft origin/main
-  stashListB="$(git -C "${DOTFILES}/nvim" stash list 2>/dev/null )"
-  git -C "${DOTFILES}/nvim" stash save -u "Made by dcon-update"
-  stashListA="$(git -C "${DOTFILES}/nvim" stash list 2>/dev/null )"
+dcon-update(){
+  # submodules update
+  git -C "${DOTFILES}/nvim" reset --hard origin/HEAD
   git -C "${DOTFILES}/nvim" pull
-  git -C "${DOTFILES}/nvim" submodule update
+  git -C "${DOTFILES}/nvim" submodule update --recursive --init --force
 }
