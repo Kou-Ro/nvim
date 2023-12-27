@@ -38,5 +38,27 @@ require('packer').startup(function()
     run = "./dl_binaries.sh",
     config = function()  require("PluginConfig/tabnine") end
   }
+
+  use {
+    "neoclide/coc.nvim",
+    branch = "release"
+  }
+
+  use {
+    "mattn/emmet-vim"
+  }
+
+  use {
+    "ibhagwan/fzf-lua",
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
+
+  use {
+    "andweeb/presence.nvim"
+  }
+
+  use {
+    "sindrets/diffview.nvim"
+  }
 end)
 
