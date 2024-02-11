@@ -60,5 +60,14 @@ require('packer').startup(function()
   use {
     "sindrets/diffview.nvim"
   }
+
+  use {
+    "rhysd/git-messenger.vim"
+  }
+
+  use {
+    "pocco81/auto-save.nvim",
+    config = function() require("PluginConfig/auto-save") end
+  }
 end)
 
