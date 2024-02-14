@@ -69,5 +69,9 @@ require('packer').startup(function()
     "pocco81/auto-save.nvim",
     config = function() require("PluginConfig/auto-save") end
   }
+
+  use {
+    "wakatime/vim-wakatime"
+  }
 end)
 
