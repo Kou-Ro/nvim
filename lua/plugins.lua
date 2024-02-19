@@ -73,5 +73,9 @@ require('packer').startup(function()
   use {
     "wakatime/vim-wakatime"
   }
+
+  use {
+      "github/copilot.vim"
+  }
 end)
 
