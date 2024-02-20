@@ -67,7 +67,7 @@ require('packer').startup(function()
 
   use {
     "pocco81/auto-save.nvim",
-    config = function() require("PluginConfig/auto-save") end
+--    config = function() require("PluginConfig/auto-save") end
   }
 
   use {
