@@ -5,4 +5,4 @@ require "function"
 require "vimopt"
 
 -- Package manager
-require "plugins"
+require "plugin"
