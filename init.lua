@@ -5,4 +5,4 @@ end
 
 vim.opt.runtimepath:append(NDOTDIR)
 
-require "common"
+require("common")

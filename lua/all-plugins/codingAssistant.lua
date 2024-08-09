@@ -1,7 +1,7 @@
 return {
   {
-    "neoclide/coc.nvim",
-    enabled = true,
+    "noeclide/coc.nvim",
+    enabled = false,
     branch = "release",
   },
   {
@@ -18,6 +18,13 @@ return {
     end,
   },
   {
+    "poco81/auto-save.nvim",
+    enabled = false,
+--  config = function()
+--    require("pluginConfig/auto-save")
+--  end,
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     enabled = true,
     lazy = false,
@@ -29,6 +36,6 @@ return {
     config = function()
 
       require("nvim-tree").setup({})
-    end
+    end,
   },
 }

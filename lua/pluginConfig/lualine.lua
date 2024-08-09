@@ -7,5 +7,8 @@ require("lualine").setup{
         lualine_y = {},
         lualine_z = {}
     },
-    sections = {lualine_c = {'lsp_progress'}, lualine_x = {'tabnine'}}
+    sections = {
+        lualine_c = {'lsp_progress'},
+        lualine_x = {'tabnine'}
+    }
 }
