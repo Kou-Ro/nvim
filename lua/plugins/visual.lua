@@ -8,8 +8,7 @@ return {
       },
     },
     config = function()
-        require("dirSet")
-        require("luahoge")
+        require("pluginConfig/lualine")
     end,
   },
   {
