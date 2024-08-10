@@ -7,6 +7,10 @@ return {
           "nvim-tree/nvim-web-devicons"
       },
     },
+    config = function()
+        require("dirSet")
+        require("luahoge")
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
