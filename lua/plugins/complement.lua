@@ -1,14 +1,16 @@
 return {
     {
-        "codota/tabnine-nvim",
-        build = "./dl_binaries.sh",
-        enabled = true,
-        config = function()
-            require("pluginConfig/tabnine")
-        end,
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
     },
     {
-        "github/copilot.vim",
-        enabled = true,
+        "zbirenbaum/copilot.lua",
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function ()
+            require("copilot_cmp").setup()
+        end
     }
 }
