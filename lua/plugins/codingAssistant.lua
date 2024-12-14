@@ -1,10 +1,5 @@
 return {
   {
-    "neoclide/coc.nvim",
-    enabled = true,
-    branch = "release",
-  },
-  {
     "ibhagwan/fzf-lua",
     enabled = true,
     dependencies = {
