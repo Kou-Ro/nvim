@@ -9,6 +9,6 @@ require("lualine").setup{
     },
     sections = {
         lualine_c = {'lsp_progress'},
-        lualine_x = {'tabnine'}
+        lualine_x = {function() return '#'..tostring(vim.api.nvim_get_current_buf());end},
     }
 }
