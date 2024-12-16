@@ -1,10 +1,10 @@
 return {
   {
-    "sindrets/diffview.nvim",
+    'sindrets/diffview.nvim',
     enabled = true,
   },
   {
-    "rhysd/git-messenger.vim",
+    'rhysd/git-messenger.vim',
     enabled = true,
   }
 }

@@ -1,11 +1,11 @@
 return {
     {
-        "folke/tokyonight.nvim",
+        'folke/tokyonight.nvim',
         enabled = true,
         lazy = false,
         priority = 1000,
         config = function()
-            require("pluginConfig/tokyonight")
+            require('pluginConfig/tokyonight')
         end,
     },
 }

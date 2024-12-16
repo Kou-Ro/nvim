@@ -1,8 +1,8 @@
 -- Functions definition
-require("function")
+require('function')
 
 -- Vim options settings
-require("vimopt")
+require('vimopt')
 
 -- Package manager
-require("lazy-init")
+require('lazy-init')

@@ -1,4 +1,4 @@
-require("lualine").setup{
+require('lualine').setup{
     tabline = {
         lualine_a = {},
         lualine_b = {'branch'},
