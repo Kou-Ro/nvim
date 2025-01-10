@@ -48,7 +48,8 @@ return {
                     { name = 'path' },
                 }),
             })
-        end
+        end,
+        enable = false,
     },
     {
         'windwp/nvim-autopairs',
@@ -61,6 +62,7 @@ return {
             local cmp = require('cmp')
             cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
         end,
+        enable = false,
     },
     {
         'zbirenbaum/copilot.lua',
@@ -70,11 +72,13 @@ return {
                 panel = { enabled = true },
             })
         end,
+        enable =  false,
     },
     {
         'zbirenbaum/copilot-cmp',
         config = function ()
             require('copilot_cmp').setup()
-        end
+        end,
+        enable = false,
     },
 }
