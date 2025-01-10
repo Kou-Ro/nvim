@@ -40,7 +40,7 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        enabled = true,
+        enabled = false,
         lazy = true,
         build = ':TSUpdate',
         config = function()

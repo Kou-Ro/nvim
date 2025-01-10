@@ -1,23 +1,34 @@
 return {
     {
-        'neovim/nvim-lspconfig'
-    },
-    {
         'williamboman/mason.nvim',
         config = function()
-            require('mason').setup()
+            require('mason').setup({
+                max_concurrent_installers = 10,
+            })
         end,
+        build = ':MasonUpdate',
     },
     {
         'williamboman/mason-lspconfig.nvim',
+        dependencies = {
+            'williamboman/mason.nvim',
+        },
         config = function()
-            require('mason-lspconfig').setup()
+            require('mason-lspconfig').setup({
+                ensure_installed = require("pluginConfig/mason-lspconfig-servers")
+            })
             require('mason-lspconfig').setup_handlers{
                 function(server_name)
                     require('lspconfig')[server_name].setup{}
                 end,
             }
         end,
+    },
+    {
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+        },
     },
     {
         'hrsh7th/nvim-cmp',
@@ -49,7 +60,7 @@ return {
             local cmp_autopairs = require('nvim-autopairs.completion.cmp')
             local cmp = require('cmp')
             cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-        end
+        end,
     },
     {
         'zbirenbaum/copilot.lua',
