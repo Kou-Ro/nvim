@@ -8,4 +8,4 @@ opt.number = true
 opt.termguicolors = true
 opt.clipboard = 'unnamed'
 opt.hls = false
-opt.hls = cursorline
+opt.cursorline = true
