@@ -2,8 +2,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
         local set = function(mode, lhs, rhs, desc)
             vim.keymap.set(mode, lhs, rhs, { buffer = true, desc = desc })
-            end
-        
+        end
+
         local n = 'n' -- Normal mode
 
         -- Symbol-related mappings
@@ -12,11 +12,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         set(n, 'gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
         set(n, 'gr', vim.lsp.buf.references, '[G]oto [R]eferences')
         set(n, 'gy', vim.lsp.buf.type_definition, '[G]oto T[y]pe Definition')
-        
+
         -- Hover and help
         set(n, 'K', vim.lsp.buf.hover, 'Show Hover Documentation')
         set(n, '<C-k>', vim.lsp.buf.signature_help, 'Show Signature Help')
-        
+
         -- Editing operations
         set(n, '<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
         set(n, '<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
@@ -34,8 +34,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         set(n, '<leader>wl', function()
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, '[W]orkspace [L]ist Folders')
-    
-        end,
+
+    end,
 })
 
-capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()

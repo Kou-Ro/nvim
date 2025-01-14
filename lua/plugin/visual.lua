@@ -1,14 +1,20 @@
-return {
-  {
-    "nvim-lualine/lualine.nvim",
-    enabled = true,
-    dependencies = {
-      {
+local enabled = false
+
+if enabled then
+  return {
+    {
+      "nvim-lualine/lualine.nvim",
+      enabled = true,
+      dependencies = {
+        {
           "nvim-tree/nvim-web-devicons"
+        },
       },
-    },
-    config = function()
+      config = function()
         require("pluginConfig/lualine")
-    end,
-  },
-}
+      end,
+    },
+  }
+else
+  return {}
+end
