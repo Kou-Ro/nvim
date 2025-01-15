@@ -9,7 +9,7 @@ if enabled then
     {
       'rhysd/git-messenger.vim',
       enabled = true,
-    }
+    },
   }
 else
   return {}

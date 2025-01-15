@@ -6,3 +6,6 @@ require('vimopt')
 
 -- Package manager
 require('lazy-init')
+
+-- Setting auto commands
+require('autocmd')

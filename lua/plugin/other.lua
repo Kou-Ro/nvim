@@ -10,7 +10,7 @@ if enabled then
     {
       'wakatime/vim-wakatime',
       enabled = true,
-      lazy = false
+      lazy = false,
     },
   }
 else

@@ -25,9 +25,8 @@ if enabled then
         },
       },
       config = function()
-
         require('nvim-tree').setup({})
-      end
+      end,
     },
     {
       'windwp/nvim-autopairs',
@@ -39,7 +38,7 @@ if enabled then
         local cmp_autopairs = require('nvim-autopairs.completion.cmp')
         local cmp = require('cmp')
         cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-      end
+      end,
     },
     {
       'nvim-treesitter/nvim-treesitter',
@@ -49,14 +48,54 @@ if enabled then
       config = function()
         local configs = require('nvim-treesitter.configs')
         configs.setup({
-          ensure_installed = {'arduino','bash','c','c_sharp','cmake','comment','cpp','css','diff','dockerfile','git_config','git_rebase','gitattributes','gitcommit','gitignore','java','javascript','jsdoc','json','json5','jsonc','kotlin','latex','lua','make','markdown','markdown_inline','passwd','python','rust','scheme','sql','ssh_config','tsx','typescript','udev','vim','vimdoc','yaml',},
+          ensure_installed = {
+            'arduino',
+            'bash',
+            'c',
+            'c_sharp',
+            'cmake',
+            'comment',
+            'cpp',
+            'css',
+            'diff',
+            'dockerfile',
+            'git_config',
+            'git_rebase',
+            'gitattributes',
+            'gitcommit',
+            'gitignore',
+            'java',
+            'javascript',
+            'jsdoc',
+            'json',
+            'json5',
+            'jsonc',
+            'kotlin',
+            'latex',
+            'lua',
+            'make',
+            'markdown',
+            'markdown_inline',
+            'passwd',
+            'python',
+            'rust',
+            'scheme',
+            'sql',
+            'ssh_config',
+            'tsx',
+            'typescript',
+            'udev',
+            'vim',
+            'vimdoc',
+            'yaml',
+          },
           sync_install = false,
           auto_install = true,
-          highlight = {enable=true},
-          indent = {enable=true},
+          highlight = { enable = true },
+          indent = { enable = true },
         })
       end,
-    }
+    },
   }
 else
   return {}
