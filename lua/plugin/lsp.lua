@@ -57,6 +57,10 @@ if enabled then
       enable = true,
     },
     {
+      'onsails/lspkind.nvim',
+      enable = true,
+    },
+    {
       'hrsh7th/nvim-cmp',
       enable = true,
       dependencies = {
@@ -65,36 +69,14 @@ if enabled then
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
-        'L3MON4D3/LUaSnip',
+        'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
+        'onsails/lspkind.nvim',
+        'zbirenbaum/copilot-cmp',
       },
       event = { 'InsertEnter', 'CmdlineEnter' },
       config = function()
-        local cmp = require('cmp')
-        cmp.setup({
-          snippet = {
-            expand = function(args)
-              require('luasnip').lsp_expand(args.body)
-            end,
-          },
-          window = {
-            completion = cmp.config.window.bordered(),
-            documentation = cmp.config.window.borderd(),
-          },
-          mapping = cmp.mapping.preset.insert({
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-Space>'] = cmp.mapping.complete(),
-            ['<C-e>'] = cmp.mapping.abort(),
-            ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          }),
-          sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' },
-            { name = 'buffer' },
-            { name = 'path' },
-          }),
-        })
+          require('pluginConfig/nvim-cmp')
       end,
     },
     {
@@ -119,7 +101,7 @@ if enabled then
     },
     {
       'zbirenbaum/copilot.lua',
-      enable = false,
+      enable = true,
       config = function()
         require('copilot').setup({
           suggestion = { enabled = true },
@@ -129,7 +111,7 @@ if enabled then
     },
     {
       'zbirenbaum/copilot-cmp',
-      enable = false,
+      enable = true,
       config = function()
         require('copilot_cmp').setup()
       end,
