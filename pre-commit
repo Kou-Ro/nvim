@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if ! command -v stylua &> /dev/null
+then
+    echo "stylua could not be found. Please install stylua first."
+    exit 1
+fi
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.lua$')
+
+if [ "$FILES" != "" ]; then
+    echo "Running stylua on the following files:"
+    echo "$FILES"
+    if ! echo "$FILES" | xargs stylua; then
+        echo "Error: stylua failed. Aborting commit."
+        exit 1
+    fi
+    echo "$FILES" | xargs git add
+fi
+
+exit 0
