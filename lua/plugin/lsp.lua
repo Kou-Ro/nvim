@@ -13,6 +13,7 @@ if enabled then
     },
     {
       'williamboman/mason-lspconfig.nvim',
+      enable = true,
       dependencies = {
         'williamboman/mason.nvim',
         'neovim/nvim-lspconfig',

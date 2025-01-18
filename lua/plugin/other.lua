@@ -4,7 +4,7 @@ if enabled then
   return {
     {
       'andweeb/pressence.nvim',
-      enabled = false,
+      enabled = true,
       lazy = false,
     },
     {
