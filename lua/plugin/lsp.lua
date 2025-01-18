@@ -27,6 +27,15 @@ if enabled then
       dependencies = {
         'williamboman/mason-lspconfig.nvim',
       },
+      config = function()
+        vim.diagnostic.config({
+          virtual_text = true,
+          signs = true,
+          underline = true,
+          update_in_insert = true,
+          severity_sort = true,
+        })
+      end,
     },
     {
       'L3MON4D3/LuaSnip',
