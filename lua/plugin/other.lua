@@ -3,9 +3,10 @@ local enabled = true
 if enabled then
   return {
     {
-      'andweeb/pressence.nvim',
+      'andweeb/presence.nvim',
       enabled = true,
       lazy = false,
+      config = true,
     },
     {
       'wakatime/vim-wakatime',
