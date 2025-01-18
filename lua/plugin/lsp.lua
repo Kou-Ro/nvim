@@ -18,25 +18,7 @@ if enabled then
         'neovim/nvim-lspconfig',
       },
       config = function()
-        require('mason-lspconfig').setup({
-          ensure_installed = require('pluginConfig/mason-lspconfig-servers'),
-        })
-        require('mason-lspconfig').setup_handlers({
-          function(server_name)
-            require('lspconfig')[server_name].setup({})
-          end,
-          ['lua_ls'] = function()
-            require('lspconfig')['lua_ls'].setup({
-              settings = {
-                Lua = {
-                  diagnostics = {
-                    globals = { 'vim' },
-                  },
-                },
-              },
-            })
-          end,
-        })
+        require('pluginConfig/mason-lspconfig')
       end,
     },
     {
@@ -76,7 +58,7 @@ if enabled then
       },
       event = { 'InsertEnter', 'CmdlineEnter' },
       config = function()
-          require('pluginConfig/nvim-cmp')
+        require('pluginConfig/nvim-cmp')
       end,
     },
     {
