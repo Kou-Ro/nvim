@@ -15,7 +15,6 @@ return {
   'kotlin_language_server', -- Kotlin
   'ltex', -- LaTex
   'lua_ls', -- Lua
-  'nginx_language_server', -- Nginx
   'ts_ls', -- TypeScript
   'vimls', -- VimScript
   'rust_analyzer', -- Rust
