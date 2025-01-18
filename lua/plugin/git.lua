@@ -10,6 +10,13 @@ if enabled then
       'rhysd/git-messenger.vim',
       enabled = true,
     },
+    {
+      'akinsho/git-conflict.nvim',
+      enabled = true,
+      config = function()
+        require('git-conflict').setup()
+      end,
+    },
   }
 else
   return {}
