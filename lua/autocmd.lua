@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd({ 'TermOpen' }, {
 })
 
 vim.api.nvim_create_autocmd({ 'FileType' }, {
+  pattern = 'lua',
   callback = function(arg)
     bo.shiftwidth = 2
     bo.tabstop = 2
