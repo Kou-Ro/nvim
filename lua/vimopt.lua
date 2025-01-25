@@ -11,3 +11,4 @@ opt.clipboard = 'unnamed'
 opt.hls = false
 opt.cursorline = true
 opt.signcolumn = 'yes:1'
+opt.clipboard = 'unnamedplus'
