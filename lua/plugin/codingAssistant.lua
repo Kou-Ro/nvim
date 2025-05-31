@@ -59,6 +59,14 @@ if enabled then
         vim.g.vimtex_indent_enabled = 1
         vim.g.vimtex_syntax_enabled = 1
         vim.g.vimtex_syntax_conceal_disable = 1
+        vim.g.vimtex_compiler_latexmk = {
+          options = {
+            '-pdf',
+            '-lualatex',
+            '-interaction=nonstopmode',
+            '-synctex=1',
+          },
+        }
       end,
     },
   }
