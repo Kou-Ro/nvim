@@ -7,7 +7,6 @@ opt.expandtab = true
 opt.number = true
 opt.numberwidth = 2
 opt.termguicolors = true
-opt.clipboard = 'unnamed'
 opt.hls = false
 opt.cursorline = true
 opt.signcolumn = 'yes:1'
