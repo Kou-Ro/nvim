@@ -15,6 +15,7 @@ return {
   'kotlin_language_server', -- Kotlin
   'ltex', -- LaTex
   'lua_ls', -- Lua
+  'prisma-language-server', -- Prisma
   'rust_analyzer', -- Rust
   'ts_ls', -- TypeScript
   'vimls', -- VimScript
