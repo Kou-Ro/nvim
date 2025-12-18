@@ -38,3 +38,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, '[W]orkspace [L]ist Folders')
   end,
 })
+
+requier('lsps.none-ls')

@@ -52,3 +52,26 @@ vim.api.nvim_create_autocmd('FileType', {
     bo.indentexpr = ''
   end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = {
+    '*.js',
+    '*.jsx',
+    '*.ts',
+    '*.tsx',
+    '*.json',
+    '*.css',
+    '*.scss',
+    '*.html',
+    '*.yaml',
+    '*.md',
+  },
+  callback = function()
+    vim.lsp.buf.format({
+      async = false,
+      filter = function(client)
+        return client.name == 'null-ls'
+      end,
+    })
+  end,
+})
