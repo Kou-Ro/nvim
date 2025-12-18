@@ -49,6 +49,6 @@ vim.api.nvim_create_autocmd('FileType', {
     'tsx',
   },
   callback = function()
-    bo.identexpr = ''
+    bo.indentexpr = ''
   end,
 })
