@@ -108,6 +108,13 @@ if enabled then
         require('copilot_cmp').setup()
       end,
     },
+    {
+      'nvimtools/none-ls.nvim',
+      enable = true,
+      dependencies = {
+        'nvim-lua/plenary.nvim',
+      },
+    },
   }
 else
   return {}
