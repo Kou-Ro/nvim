@@ -44,6 +44,9 @@ if enabled then
     {
       'windwp/nvim-ts-autotag',
       enabled = true,
+      dependencies = {
+        'nvim-treesitter/nvim-treesitter',
+      },
       config = function()
         require('pluginConfig/nvim-ts-autotag')
       end,
