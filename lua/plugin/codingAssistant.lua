@@ -48,7 +48,7 @@ if enabled then
         'nvim-treesitter/nvim-treesitter',
       },
       config = function()
-        require('pluginConfig/nvim-ts-autotag')
+        require('nvim-ts-autotag').setup({})
       end,
     },
     {

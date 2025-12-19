@@ -23,7 +23,6 @@ configs.setup({
     'json5',
     'jsonc',
     'kotlin',
-    'latex',
     'lua',
     'make',
     'markdown',
