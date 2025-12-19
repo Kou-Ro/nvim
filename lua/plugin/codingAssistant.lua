@@ -79,6 +79,22 @@ if enabled then
         }
       end,
     },
+    {
+      'andymass/vim-matchup',
+      init = function()
+        vim.g.matchup_treesitter_stopline = 500
+        require('matchup').setup({
+          treesitter = {
+            stopline = 500,
+          },
+        })
+      end,
+      opts = {
+        treesitter = {
+          stopline = 500,
+        },
+      },
+    },
   }
 else
   return {}

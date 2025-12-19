@@ -12,6 +12,12 @@ if enabled then
         require('pluginConfig/lualine')
       end,
     },
+    {
+      'lukas-reineke/indent-blankline.nvim',
+      enabled = true,
+      main = 'ibl',
+      opts = {},
+    },
   }
 else
   return {}
