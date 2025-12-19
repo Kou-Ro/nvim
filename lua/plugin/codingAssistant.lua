@@ -83,7 +83,7 @@ if enabled then
       'andymass/vim-matchup',
       init = function()
         vim.g.matchup_treesitter_stopline = 500
-        require('matchup').setup({
+        require('match-up').setup({
           treesitter = {
             stopline = 500,
           },
