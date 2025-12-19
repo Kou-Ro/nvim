@@ -39,4 +39,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-requier('lsps.none-ls')
+require('lsps.none-ls')
