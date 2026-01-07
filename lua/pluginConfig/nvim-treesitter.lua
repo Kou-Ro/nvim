@@ -20,7 +20,6 @@ tsconfig.install({
   'jsdoc',
   'json',
   'json5',
-  'jsonc',
   'kotlin',
   'lua',
   'make',
