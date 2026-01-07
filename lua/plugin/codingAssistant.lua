@@ -54,7 +54,7 @@ if enabled then
     {
       'nvim-treesitter/nvim-treesitter',
       enabled = true,
-      lazy = true,
+      lazy = false,
       build = ':TSUpdate',
       config = function()
         require('pluginConfig/nvim-treesitter')
