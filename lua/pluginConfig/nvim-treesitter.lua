@@ -1,5 +1,5 @@
 local tsconfig = require('nvim-treesitter')
-tsconfig.install({
+local tslanguages = {
   'arduino',
   'bash',
   'c',
@@ -37,4 +37,13 @@ tsconfig.install({
   'vim',
   'vimdoc',
   'yaml',
+}
+
+tsconfig.install(tslanguages)
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = tslanguages,
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
 })
