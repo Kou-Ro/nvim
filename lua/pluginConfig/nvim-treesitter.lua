@@ -41,10 +41,3 @@ local tslanguages = {
 
 tsconfig.setup({})
 tsconfig.install(tslanguages):await()
-
-vim.api.nvim_create_autocmd('FileType', {
-  group = vim.api.nvim_create_augroup('TSStart', { clear = true }),
-  callback = function(ctx)
-    pcall(vim.treesitter.start)
-  end,
-})
