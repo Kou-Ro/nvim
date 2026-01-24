@@ -1,6 +1,6 @@
 return {
   'arduino_language_server',
-  'asm_lsp',
+  'asm-lsp',
   'ast_grep',
   'autotools-language-server',
   'bash-language-server',
