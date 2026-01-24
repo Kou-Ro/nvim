@@ -1,22 +1,23 @@
 return {
-  --  'arduino_language_server', -- Arduino
-  --  'asm_lsp', -- Assembly
-  --  'ast_grep',
-  --  'autotools_ls',
-  --  'bashls', -- Bash
-  --  'biome', -- JavaScript
-  --  'clangd', -- C/C++
-  --  'cmake', -- CMakej
-  --  'codebook',
-  --  'dockerls', -- Docker
-  --  'docker_compose_language_service', -- Docker
-  --  'eslint', -- JavaScript
-  --  'harper_ls',
-  --  'kotlin_language_server', -- Kotlin
-  --  'ltex', -- LaTex
-  --  'lua_ls', -- Lua
-  --  'prisma-language-server', -- Prisma
-  --  'rust_analyzer', -- Rust
-  --  'ts_ls', -- TypeScript
-  --  'vimls', -- VimScript
+  'arduino_language_server',
+  'asm_lsp',
+  'ast_grep',
+  'autotools-language-server',
+  'bash-language-server',
+  'biome',
+  'clangd',
+  'cmake-language-server',
+  'codebook',
+  'docker-compose_language_service',
+  'docker-language-server',
+  'dotenv-linter',
+  'eslint-lsp',
+  'harper-ls',
+  'json-lsp',
+  'ltex-ls-plus',
+  'lua-language-server',
+  'prisma-language-server',
+  'rust-analyzer',
+  'typescript-language-server',
+  'wc-language-server',
 }
