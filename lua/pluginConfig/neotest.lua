@@ -14,9 +14,8 @@ require('neotest').setup({
   },
 })
 
-local keymap = require('lib/keymap')
-local set = keymap.set
-local n = keymap.mode.NORMAL
+local set = require('lib/keymap').set
+local n = 'n'
 
 local neotest = require('neotest')
 
