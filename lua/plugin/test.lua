@@ -25,7 +25,7 @@ if enabled then
     },
     {
       'marilari88/neotest-vitest',
-      enabled = false,
+      enabled = true,
     },
   }
 else
