@@ -18,6 +18,10 @@ if enabled then
       main = 'ibl',
       opts = {},
     },
+    {
+      'mortepau/codicons.nvim',
+      enabled = true,
+    },
   }
 else
   return {}
