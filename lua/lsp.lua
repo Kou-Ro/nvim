@@ -1,10 +1,8 @@
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
-    local set = function(mode, lhs, rhs, desc)
-      vim.keymap.set(mode, lhs, rhs, { buffer = true, desc = desc })
-    end
-
-    local n = 'n' -- Normal mode
+    local keymap = require('lib/keymap')
+    local set = keymap.set
+    local n = keymap.modes.NORMAL
 
     -- Symbol-related mappings
     set(n, 'gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
