@@ -12,31 +12,31 @@ require('neotest').setup({
       },
     }),
   },
-})(function()
-  local keymap = require('utils/keymap')
-  local set = keymap.set
-  local n = keymap.mode.NORMAL
+})
 
-  local neotest = require('neotest')
+local keymap = require('utils/keymap')
+local set = keymap.set
+local n = keymap.mode.NORMAL
 
-  -- For all neotest adapters
-  set(n, '<leader>tt', neotest.run.run(), 'Run nearest test')
-  set(n, '<leader>tf', neotest.run.run(vim.fn.expand('%')), 'Run current file tests')
-  set(n, '<leader>td', neotest.run.run({ strategy = 'dap' }), 'Debug nearest test')
-  set(n, '<leader>ts', neotest.summary.toggle(), 'Toggle test summary')
-  set(n, '<leader>to', neotest.output.open({ enter = true }), 'Open test output')
+local neotest = require('neotest')
 
-  -- For neotest-playwright
-  set(n, '<leader>tp', ':NeotestPlaywrightProject<CR>', 'Playwright project settings')
-  set(n, '<leader>tpr', ':NeotestPlaywrightPreset<CR>', 'Playwright preset')
-  set(n, '<leader>tra', ':NeotestPlaywrightRefresh<CR>', 'Playwright refresh')
-  set(n, '<leader>th', ':NeotestPlaywrightPreset<CR>', 'Set headed preset')
+-- For all neotest adapters
+set(n, '<leader>tt', neotest.run.run(), 'Run nearest test')
+set(n, '<leader>tf', neotest.run.run(vim.fn.expand('%')), 'Run current file tests')
+set(n, '<leader>td', neotest.run.run({ strategy = 'dap' }), 'Debug nearest test')
+set(n, '<leader>ts', neotest.summary.toggle(), 'Toggle test summary')
+set(n, '<leader>to', neotest.output.open({ enter = true }), 'Open test output')
 
-  set(n, '<leader>twr', require('neotest').run.run({ vitestCommand = 'vitest--watch' }), 'RunWatch')
-  set(
-    n,
-    '<leader>twf',
-    require('neotest').run.run({ vim.fn.expand('%'), vitestCommand = 'vitest--watch' }),
-    'RunWatchFile'
-  )
-end)()
+-- For neotest-playwright
+set(n, '<leader>tp', ':NeotestPlaywrightProject<CR>', 'Playwright project settings')
+set(n, '<leader>tpr', ':NeotestPlaywrightPreset<CR>', 'Playwright preset')
+set(n, '<leader>tra', ':NeotestPlaywrightRefresh<CR>', 'Playwright refresh')
+set(n, '<leader>th', ':NeotestPlaywrightPreset<CR>', 'Set headed preset')
+
+set(n, '<leader>twr', require('neotest').run.run({ vitestCommand = 'vitest--watch' }), 'RunWatch')
+set(
+  n,
+  '<leader>twf',
+  require('neotest').run.run({ vim.fn.expand('%'), vitestCommand = 'vitest--watch' }),
+  'RunWatchFile'
+)
