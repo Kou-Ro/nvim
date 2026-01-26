@@ -92,23 +92,6 @@ if enabled then
       end,
     },
     {
-      'zbirenbaum/copilot.lua',
-      enable = true,
-      config = function()
-        require('copilot').setup({
-          suggestion = { enabled = true },
-          panel = { enabled = true },
-        })
-      end,
-    },
-    {
-      'zbirenbaum/copilot-cmp',
-      enable = true,
-      config = function()
-        require('copilot_cmp').setup()
-      end,
-    },
-    {
       'nvimtools/none-ls.nvim',
       enable = true,
       dependencies = {

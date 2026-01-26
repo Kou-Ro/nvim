@@ -95,6 +95,36 @@ if enabled then
         },
       },
     },
+    {
+      'zbirenbaum/copilot.lua',
+      enable = true,
+      config = function()
+        require('copilot').setup({
+          suggestion = { enabled = true },
+          panel = { enabled = true },
+        })
+      end,
+    },
+    {
+      'zbirenbaum/copilot-cmp',
+      enable = true,
+      config = function()
+        require('copilot_cmp').setup()
+      end,
+    },
+    {
+      'CopilotC-Nvim/CopilotChat.nvim',
+      enabled = true,
+      dependencies = {
+        'zbirenbaum/copilot.lua',
+        'nvim-lua/plenary.nvim',
+      },
+      build = 'make tiktoken',
+      config = require('pluginConfig/CopilotChat').config,
+      opts = {
+        debug = true,
+      },
+    },
   }
 else
   return {}
