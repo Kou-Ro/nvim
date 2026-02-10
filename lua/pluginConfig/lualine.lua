@@ -22,14 +22,16 @@ require('lualine').setup({
   sections = {
     lualine_a = { 'mode' },
     lualine_b = {
-      'diff',
       {
         'diagnostics',
         sources = { 'nvim_lsp' },
         symbols = { error = '✕', warn = '⚠', info = '⭘', hint = '✓' },
       },
     },
-    lualine_c = { 'filename' },
+    lualine_c = { {
+      'filename',
+      path = 4,
+    }, 'diff' },
     lualine_x = { get_buffer },
     lualine_y = {
       'progress',
