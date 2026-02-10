@@ -22,6 +22,7 @@ require('lualine').setup({
   sections = {
     lualine_a = { 'mode' },
     lualine_b = {
+      'diff',
       {
         'diagnostics',
         sources = { 'nvim_lsp' },
@@ -31,7 +32,7 @@ require('lualine').setup({
     lualine_c = { {
       'filename',
       path = 4,
-    }, 'diff' },
+    } },
     lualine_x = { get_buffer },
     lualine_y = {
       'progress',
@@ -52,7 +53,10 @@ require('lualine').setup({
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { 'filename' },
+    lualine_c = { {
+      'filename',
+      path = 4,
+    } },
     lualine_x = { get_buffer },
     lualine_y = {},
     lualine_z = {},
