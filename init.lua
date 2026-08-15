@@ -5,8 +5,7 @@ end
 
 -- VS Code Neovim environment
 if vim.g.vscode then
-  require('function')
-  require('vimopt')
+  require('vscode')
   return
 end
 
